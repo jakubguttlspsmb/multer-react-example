@@ -56,7 +56,7 @@ const saveIntoDb = async (req, res) => {
   try {
     const upload = new Uploads({
       name: req.body.imgName,
-      imagePath: "http://localhost:3000/img/" + req.file.filename,
+      imagePath: "http://localhost:3333/img/" + req.file.filename,
     });
     const result = await upload.save();
     if (result) {

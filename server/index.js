@@ -4,12 +4,14 @@ const morgan = require("morgan");
 const cors = require("cors");
 const path = require("path");
 const app = express();
-const PORT = 3000;
+const PORT = 3333;
 
 mongoose
-.connect('')
-.then(() => console.log("Database connected"))
-.catch((err) => console.log(err));
+  .connect(
+    "mongodb+srv://admin:adminadmin@cluster0.pj1sbdh.mongodb.net/mongoman?retryWrites=true&w=majority"
+  )
+  .then(() => console.log("Database connected"))
+  .catch((err) => console.log(err));
 
 const uploadsRouter = require("./routes/uploads");
 
